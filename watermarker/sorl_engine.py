@@ -23,7 +23,9 @@ class WatermarkEngine(Engine):
         image = super(WatermarkEngine, self).create(image, geometry, options)
         if 'watermark' in options or WATERMARK_FORCE:
             text = options.get('watermark', WATERMARK_FORCE)
-            if max(geometry)>WATERMARK_MIN_SIZE:
-                image = watermark(image, text ,**WATERMARK_OPTIONS)
+            if max(geometry) > WATERMARK_MIN_SIZE:
+                kwargs = dict(WATERMARK_OPTIONS)
+                kwargs.update(options.get('watermark_options', {}))
+                image = watermark(image, text, **kwargs)
         return image
   
