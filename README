@@ -3,6 +3,8 @@ Watermarker
 
 Library for add text watermarks to images using PIL
 
+Forked from the original version available written by zeus (https://bitbucket.org/zeus/watermarker/).
+
 Installation:
 =============
 
