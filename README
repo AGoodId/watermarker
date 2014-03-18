@@ -21,9 +21,12 @@ Import watermark function from watermarker, then call watermark, providing optio
 * font_path (required)- font that will be used
 * font_scale (required or font_size provided) - watermark font size will be set as percent of image height
 * font_size (required or font_scale provided)
-* color (optional) - default (0,0,0)
+* color (optional) - default (0,0,0) - the color of the text
+* outline (optional) - default (0,0,0) - the color of the outline, use None to disable
 * opacity (optional) - default 0.6
-* margin (optional) - default (30, 30) - margin, in pixels, from bottom right corner of image, where watermark will be placed
+* position - default 'bottom-left' - where the text will be placed, as a string '[bottom,top]-[left,right]'
+* margin (optional) - default (30, 30) - margin, in pixels or relative size if less than 1, from the edge specified by position
+* antialias (optional) - default True - whether to antialias text or not
 
 sorl-thumbnail integration
 --------------------------
